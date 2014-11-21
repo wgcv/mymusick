@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <title>prueba</title>
+  <meta name="description" content="prueba">
+  <meta name="author" content="wgcv">
+
+ 
+</head>
+
+<body>
+<h1>hola</h1>
+ {{ salida }}
+<form action="/agregar/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

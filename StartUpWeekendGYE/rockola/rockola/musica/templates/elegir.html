@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>My muSICK</title>
+ 	<meta name="description" content="MyMuSICK">
+  <style type="text/css">
+  body {
+    color: #ffffff;
+   background-color: #369641;
+    display: block;
+    text-align: center;
+   
+    	}
+
+    #logo{
+  margin: 4em;
+
+    }   
+     .regresar{
+      vertical-align: center;
+      margin: 0 0 0 0;  
+     width: auto;
+    height: 45%;
+    }
+
+
+
+.myButton {
+  background-color:#44c767;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:arial;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+  background-color:#5cbf2a;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+select{
+
+    background: #FFF url(http://html-generator.weebly.com/files/theme/input-text-9.png) no-repeat 4px 4px; 
+    border: 1px solid #999; 
+    outline:0; 
+    padding-left: 25px;
+    height:2em; 
+    width: 45%; 
+  } 
+</style> 
+
+
+</head>
+
+<body><center>
+<a href="/">
+<img src="/static/icono.png" class="logo"></a><BR><BR><BR>
+<form action="/agregar/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Agregar" class='myButton'/>
+</form><a href="/rank"><br>
+<a href="/rank">
+<img src="/static/ranking.png" class="regresar">
+</a>
+</center>
+</body>
+</html>

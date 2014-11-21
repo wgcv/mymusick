@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <title>prueba</title>
+  <meta name="description" content="prueba">
+  <meta name="author" content="wgcv">
+
+ 
+</head>
+
+<body>
+ {% if enlaces %}
+ {% for enlace in enlaces %}
+ {{cancion.nombre}}
+ {% endfor %}
+{% else %}
+NO HAY ENLACES GUARDADOS Agrega!
+{% endif %}
+</body>
+</html>

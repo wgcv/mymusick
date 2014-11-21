@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>My muSICK</title>
+ 	<meta name="description" content="MyMuSICK">
+  <style type="text/css">
+  body {
+    color: #000;
+    background-color: #369641;
+    display: block;
+    text-align: center;
+   
+    	}
+
+    .logo{
+  margin: 1em;
+
+    }
+    .tabla{
+      text-align: center;
+      background-color: #ffffff;
+      color:·#000;
+    }
+    .tabla, td{
+
+      margin:; 1em;
+    }
+     .regresar{
+      margin: 1em 0;  
+     width: auto;
+    height: 45%;
+    }
+
+  </style>
+
+</head>
+
+<body>
+<a href="/">
+<img src="/static/icono.png" class="logo"></a><BR><BR><BR>
+<h1>Ranking</h1>
+ {% if canciones %}
+<center>
+<table class="tabla">
+ {% for cancion in canciones %}
+<tr>
+<td>{{cancion}}</td><td>{{cancion.total}}</td>
+<td> <a class="up" href="{% url "like" cancion.musica_id %}"><img src="/static/like.png"></a> 
+ <a class="up" href="{% url "disLike" cancion.musica_id %}"><img src="/static/dislike.png"></a>
+</td>
+ </tr>
+ {% endfor %}
+ </table></center>
+{% else %}
+NO HAY ENLACES GUARDADOS Agrega!
+{% endif %}
+<a href="/agregar/"><br>
+<img src="/static/registrate.png" class="regresar">
+</a>
+</body>
+</html>

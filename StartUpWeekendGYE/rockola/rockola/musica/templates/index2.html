@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <title>prueba</title>
+  <meta name="description" content="prueba">
+  <meta name="author" content="wgcv">
+
+ 
+</head>
+
+<body>
+ {% if canciones %}
+ {% for cancion in canciones %}
+ {{cancion}} 
+ {{cancion.total}}
+
+ <a class="up" href="{% url "like" cancion.musica_id %}">Like</a> 
+ <a class="up" href="{% url "disLike" cancion.musica_id %}">disLike</a>
+
+<br>
+ 
+ {% endfor %}
+{% else %}
+NO HAY ENLACES GUARDADOS Agrega!
+{% endif %}
+</body>
+</html>
