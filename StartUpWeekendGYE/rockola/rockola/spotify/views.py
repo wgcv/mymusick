@@ -1,7 +1,5 @@
 from django.shortcuts import render
-import spotipy
-import sys
-import spotipy.util as util
+
 import sys,os
 # Create your views here.
 def prueba(request):
